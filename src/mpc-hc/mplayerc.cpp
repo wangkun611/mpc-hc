@@ -1231,6 +1231,13 @@ BOOL CMPlayerCApp::InitInstance()
             RegCloseKey(reg);
         }
 
+        // Restore the ExePath value to prevent settings migration
+        CRegKey key;
+        if (ERROR_SUCCESS == key.Create(HKEY_CURRENT_USER, _T("Software\\MPC-HC\\MPC-HC"))) {
+            CString exePath = GetProgramPath(true);
+            key.SetStringValue(_T("ExePath"), exePath);
+        }
+
         // Remove the current playlist if it exists
         CString strSavePath;
         if (GetAppSavePath(strSavePath)) {
