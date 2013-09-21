@@ -30,9 +30,9 @@
 // TODO: change this along with the root key for settings and the mutex name to
 //       avoid possible risks of conflict with the old MPC (non HC version).
 #ifdef _WIN64
-#define PROGID _T("mplayerc64")
+#define PROGID _T("MPC-HC64")
 #else
-#define PROGID _T("mplayerc")
+#define PROGID _T("MPC-HC")
 #endif // _WIN64
 
 LPCTSTR CFileAssoc::strRegisteredAppName  = _T("MPC-HC");
