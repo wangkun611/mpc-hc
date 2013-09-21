@@ -27,8 +27,6 @@
 #include "WinAPIUtils.h"
 
 
-// TODO: change this along with the root key for settings and the mutex name to
-//       avoid possible risks of conflict with the old MPC (non HC version).
 #ifdef _WIN64
 #define PROGID _T("MPC-HC64")
 #else
